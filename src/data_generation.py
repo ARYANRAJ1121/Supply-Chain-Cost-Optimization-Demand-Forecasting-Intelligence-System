@@ -80,7 +80,7 @@ class SupplyChainDataGenerator:
         Master function to generate all supply chain datasets.
         Maintains referential integrity across all tables.
         """
-        print("🏭 Generating Supply Chain Data for TechManufacture Inc...")
+        print("[FACTORY] Generating Supply Chain Data for TechManufacture Inc...")
         print("=" * 70)
         
         # Master data (must be generated first for foreign key relationships)
@@ -104,8 +104,8 @@ class SupplyChainDataGenerator:
         # Create SQLite database
         self.create_database()
         
-        print("\n✅ All data generation complete!")
-        print(f"📁 Data saved to: {self.base_path.absolute()}")
+        print("\n[CHECK] All data generation complete!")
+        print(f"[FOLDER] Data saved to: {self.base_path.absolute()}")
         
     def generate_sku_master(self):
         """
@@ -124,7 +124,7 @@ class SupplyChainDataGenerator:
         - Fast-moving items (accessories) need frequent replenishment
         - Long lead time items need higher safety stock
         """
-        print("\n📦 Generating SKU Master Data...")
+        print("\n[PACKAGE] Generating SKU Master Data...")
         
         skus = []
         for i in range(self.n_skus):
@@ -158,7 +158,7 @@ class SupplyChainDataGenerator:
         
         self.skus_df = pd.DataFrame(skus)
         self.skus_df.to_csv(self.base_path / 'sku_master.csv', index=False)
-        print(f"   ✓ Created {len(self.skus_df)} SKUs across {len(self.categories)} categories")
+        print(f"   [OK] Created {len(self.skus_df)} SKUs across {len(self.categories)} categories")
         
     def generate_warehouse_master(self):
         """
@@ -175,7 +175,7 @@ class SupplyChainDataGenerator:
         - Which are over capacity (need expansion or redistribution)
         - Cost per unit stored (efficiency metric)
         """
-        print("\n🏢 Generating Warehouse Master Data...")
+        print("\n[BUILDING] Generating Warehouse Master Data...")
         
         us_cities = ['Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia',
                      'San Antonio', 'San Diego', 'Dallas', 'San Jose', 'Austin',
@@ -199,7 +199,7 @@ class SupplyChainDataGenerator:
         
         self.warehouses_df = pd.DataFrame(warehouses)
         self.warehouses_df.to_csv(self.base_path / 'warehouse_master.csv', index=False)
-        print(f"   ✓ Created {len(self.warehouses_df)} warehouses across US")
+        print(f"   [OK] Created {len(self.warehouses_df)} warehouses across US")
         
     def generate_supplier_master(self):
         """
@@ -216,7 +216,7 @@ class SupplyChainDataGenerator:
         - Expensive but reliable suppliers increase costs
         - We need to quantify the total cost of ownership
         """
-        print("\n🚚 Generating Supplier Master Data...")
+        print("\n[TRUCK] Generating Supplier Master Data...")
         
         supplier_types = ['Manufacturer', 'Distributor', 'OEM', 'Contract Manufacturer']
         
@@ -255,7 +255,7 @@ class SupplyChainDataGenerator:
         
         self.suppliers_df = pd.DataFrame(suppliers)
         self.suppliers_df.to_csv(self.base_path / 'supplier_master.csv', index=False)
-        print(f"   ✓ Created {len(self.suppliers_df)} suppliers with varying performance")
+        print(f"   [OK] Created {len(self.suppliers_df)} suppliers with varying performance")
         
     def generate_historical_sales(self):
         """
@@ -275,7 +275,7 @@ class SupplyChainDataGenerator:
         
         Forecast accuracy directly impacts inventory costs and service levels.
         """
-        print("\n📊 Generating Historical Sales Data (24 months)...")
+        print("\n[CHART] Generating Historical Sales Data (24 months)...")
         
         sales_records = []
         date_range = pd.date_range(start=self.start_date, end=self.end_date, freq='D')
@@ -340,7 +340,7 @@ class SupplyChainDataGenerator:
         
         sales_df = pd.DataFrame(sales_records)
         sales_df.to_csv(self.base_path / 'historical_sales.csv', index=False)
-        print(f"   ✓ Created {len(sales_df):,} sales transactions over 24 months")
+        print(f"   [OK] Created {len(sales_df):,} sales transactions over 24 months")
         
     def generate_inventory_transactions(self):
         """
@@ -359,7 +359,7 @@ class SupplyChainDataGenerator:
         - Warehouse imbalances (some overstocked, others understocked)
         - Carrying costs (tied-up capital)
         """
-        print("\n📦 Generating Inventory Transactions (500K+ records)...")
+        print("\n[PACKAGE] Generating Inventory Transactions (500K+ records)...")
         
         transactions = []
         transaction_types = ['RECEIPT', 'SHIPMENT', 'ADJUSTMENT', 'TRANSFER']
@@ -399,7 +399,7 @@ class SupplyChainDataGenerator:
         inventory_df = pd.DataFrame(transactions)
         inventory_df = inventory_df.sort_values('transaction_date')
         inventory_df.to_csv(self.base_path / 'inventory_transactions.csv', index=False)
-        print(f"   ✓ Created {len(inventory_df):,} inventory transactions")
+        print(f"   [OK] Created {len(inventory_df):,} inventory transactions")
         
     def generate_purchase_orders(self):
         """
@@ -418,7 +418,7 @@ class SupplyChainDataGenerator:
         - Price trend analysis (are costs increasing?)
         - Total cost of ownership calculation
         """
-        print("\n📋 Generating Purchase Orders...")
+        print("\n[CLIPBOARD] Generating Purchase Orders...")
         
         purchase_orders = []
         
@@ -430,7 +430,7 @@ class SupplyChainDataGenerator:
             supplier_data = self.suppliers_df[self.suppliers_df['supplier_id'] == supplier_id].iloc[0]
             
             order_date = self.start_date + timedelta(days=np.random.randint(0, self.days - 120))
-            expected_lead_time = sku_data['lead_time_days']
+            expected_lead_time = int(sku_data['lead_time_days'])  # Convert to Python int
             
             # Actual lead time varies based on supplier performance
             if supplier_data['on_time_delivery_rate'] > 0.9:
@@ -468,7 +468,7 @@ class SupplyChainDataGenerator:
         
         # Save as JSON (simulating vendor management system export)
         po_df.to_json(self.base_path / 'purchase_orders.json', orient='records', indent=2)
-        print(f"   ✓ Created {len(po_df):,} purchase orders")
+        print(f"   [OK] Created {len(po_df):,} purchase orders")
         
     def generate_supplier_performance(self):
         """
@@ -477,7 +477,7 @@ class SupplyChainDataGenerator:
         WHY IT MATTERS:
         Supplier scorecards enable data-driven supplier selection and negotiation.
         """
-        print("\n⭐ Generating Supplier Performance Metrics...")
+        print("\n[STAR] Generating Supplier Performance Metrics...")
         
         performance_records = []
         
@@ -504,7 +504,7 @@ class SupplyChainDataGenerator:
         
         perf_df = pd.DataFrame(performance_records)
         perf_df.to_json(self.base_path / 'supplier_performance.json', orient='records', indent=2)
-        print(f"   ✓ Created {len(perf_df):,} supplier performance records")
+        print(f"   [OK] Created {len(perf_df):,} supplier performance records")
         
     def generate_economic_indicators(self):
         """
@@ -516,7 +516,7 @@ class SupplyChainDataGenerator:
         - Manufacturing PMI indicates business confidence
         - Currency rates affect import costs
         """
-        print("\n📈 Generating Economic Indicators...")
+        print("\n[GRAPH] Generating Economic Indicators...")
         
         date_range = pd.date_range(start=self.start_date, end=self.end_date, freq='M')
         
@@ -535,7 +535,7 @@ class SupplyChainDataGenerator:
         
         econ_df = pd.DataFrame(economic_data)
         econ_df.to_csv(self.base_path / 'economic_indicators.csv', index=False)
-        print(f"   ✓ Created {len(econ_df)} months of economic data")
+        print(f"   [OK] Created {len(econ_df)} months of economic data")
         
     def generate_promotional_calendar(self):
         """
@@ -547,7 +547,7 @@ class SupplyChainDataGenerator:
         - Promotion lift (how much demand increases)
         - Post-promotion slump
         """
-        print("\n🎉 Generating Promotional Calendar...")
+        print("\n[PARTY] Generating Promotional Calendar...")
         
         promotions = []
         promo_events = [
@@ -575,7 +575,7 @@ class SupplyChainDataGenerator:
         
         promo_df = pd.DataFrame(promotions)
         promo_df.to_csv(self.base_path / 'promotional_calendar.csv', index=False)
-        print(f"   ✓ Created {len(promo_df)} promotional campaigns")
+        print(f"   [OK] Created {len(promo_df)} promotional campaigns")
         
     def generate_bom_structure(self):
         """
@@ -592,7 +592,7 @@ class SupplyChainDataGenerator:
         - Supply chain risk analysis (single component shortage stops production)
         - Cost rollup (total product cost from component costs)
         """
-        print("\n🔧 Generating Bill of Materials...")
+        print("\n[WRENCH] Generating Bill of Materials...")
         
         bom_records = []
         
@@ -615,7 +615,7 @@ class SupplyChainDataGenerator:
         
         bom_df = pd.DataFrame(bom_records)
         bom_df.to_csv(self.base_path / 'bom_structure.csv', index=False)
-        print(f"   ✓ Created {len(bom_df)} BOM relationships")
+        print(f"   [OK] Created {len(bom_df)} BOM relationships")
         
     def create_database(self):
         """
@@ -627,7 +627,7 @@ class SupplyChainDataGenerator:
         - Realistic data extraction practice
         - Demonstration of SQL skills for interviews
         """
-        print("\n💾 Creating SQLite Database...")
+        print("\n[DISK] Creating SQLite Database...")
         
         db_path = self.base_path / 'supply_chain.db'
         conn = sqlite3.connect(db_path)
@@ -646,7 +646,7 @@ class SupplyChainDataGenerator:
         self.create_current_inventory_table(conn)
         
         conn.close()
-        print(f"   ✓ Database created: {db_path}")
+        print(f"   [OK] Database created: {db_path}")
         
     def create_current_inventory_table(self, conn):
         """
@@ -658,7 +658,7 @@ class SupplyChainDataGenerator:
         - ABC classification
         - Slow-moving inventory identification
         """
-        print("   📊 Calculating current inventory levels...")
+        print("   [CHART] Calculating current inventory levels...")
         
         current_inventory = []
         
@@ -683,7 +683,7 @@ class SupplyChainDataGenerator:
         
         inv_df = pd.DataFrame(current_inventory)
         inv_df.to_sql('current_inventory', conn, if_exists='replace', index=False)
-        print(f"   ✓ Created current inventory snapshot: {len(inv_df)} records")
+        print(f"   [OK] Created current inventory snapshot: {len(inv_df)} records")
 
 
 def main():
@@ -700,27 +700,27 @@ def main():
     print("\n" + "="*70)
     print("  DATA GENERATION SUMMARY")
     print("="*70)
-    print("\n📁 Files Created:")
-    print("   • sku_master.csv - Product catalog (200+ SKUs)")
-    print("   • warehouse_master.csv - Warehouse network (15 locations)")
-    print("   • supplier_master.csv - Supplier ecosystem (50+ suppliers)")
-    print("   • historical_sales.csv - 24 months of sales data")
-    print("   • inventory_transactions.csv - 500K+ inventory movements")
-    print("   • purchase_orders.json - Procurement history")
-    print("   • supplier_performance.json - Supplier metrics")
-    print("   • economic_indicators.csv - External market data")
-    print("   • promotional_calendar.csv - Marketing campaigns")
-    print("   • bom_structure.csv - Product component relationships")
-    print("   • supply_chain.db - SQLite database with all tables")
+    print("\n[FOLDER] Files Created:")
+    print("   - sku_master.csv - Product catalog (200+ SKUs)")
+    print("   - warehouse_master.csv - Warehouse network (15 locations)")
+    print("   - supplier_master.csv - Supplier ecosystem (50+ suppliers)")
+    print("   - historical_sales.csv - 24 months of sales data")
+    print("   - inventory_transactions.csv - 500K+ inventory movements")
+    print("   - purchase_orders.json - Procurement history")
+    print("   - supplier_performance.json - Supplier metrics")
+    print("   - economic_indicators.csv - External market data")
+    print("   - promotional_calendar.csv - Marketing campaigns")
+    print("   - bom_structure.csv - Product component relationships")
+    print("   - supply_chain.db - SQLite database with all tables")
     
-    print("\n🎯 Next Steps:")
+    print("\n[TARGET] Next Steps:")
     print("   1. Run SQL analysis queries (sql/supply_chain_queries.sql)")
     print("   2. Perform exploratory data analysis (src/exploratory_analysis.py)")
     print("   3. Build demand forecasting models (src/demand_forecasting.py)")
     print("   4. Optimize inventory levels (src/optimization.py)")
     print("   5. Generate insights and recommendations")
     
-    print("\n✅ Ready for analysis!")
+    print("\n[CHECK] Ready for analysis!")
     print("="*70 + "\n")
 
 
