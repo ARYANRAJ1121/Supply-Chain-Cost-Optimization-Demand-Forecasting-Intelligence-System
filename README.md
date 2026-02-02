@@ -179,7 +179,7 @@ python src/data_generation.py
 
 **Aryan Raj**
 - GitHub: [@ARYANRAJ1121](https://github.com/ARYANRAJ1121)
-- LinkedIn: [Connect with me](https://linkedin.com/in/your-profile)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/aryanraj11/)
 - Email: your.email@example.com
 
 ---
