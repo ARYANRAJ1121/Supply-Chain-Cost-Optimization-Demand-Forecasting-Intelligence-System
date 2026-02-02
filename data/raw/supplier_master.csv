@@ -1,0 +1,51 @@
+supplier_id,supplier_name,supplier_type,country,on_time_delivery_rate,quality_rating,payment_terms_days,minimum_order_quantity,is_preferred
+SUP001,Supplier_001,Distributor,USA,0.883,4.38,30,1995,True
+SUP002,Supplier_002,Distributor,China,0.885,3.82,60,1539,True
+SUP003,Supplier_003,Contract Manufacturer,South Korea,0.912,4.46,45,4306,True
+SUP004,Supplier_004,Contract Manufacturer,China,0.662,3.72,45,509,False
+SUP005,Supplier_005,Distributor,USA,0.805,3.91,45,2234,True
+SUP006,Supplier_006,OEM,Japan,0.858,4.23,90,4880,True
+SUP007,Supplier_007,OEM,USA,0.967,4.83,45,761,True
+SUP008,Supplier_008,Contract Manufacturer,USA,0.865,4.15,60,4640,True
+SUP009,Supplier_009,Contract Manufacturer,USA,0.922,4.63,30,258,True
+SUP010,Supplier_010,Contract Manufacturer,China,0.902,4.24,90,1055,True
+SUP011,Supplier_011,Contract Manufacturer,USA,0.972,4.79,45,3911,True
+SUP012,Supplier_012,Distributor,Japan,0.785,3.34,45,1369,False
+SUP013,Supplier_013,Manufacturer,Taiwan,0.846,4.13,60,4989,True
+SUP014,Supplier_014,Contract Manufacturer,China,0.786,3.14,45,474,False
+SUP015,Supplier_015,Distributor,South Korea,0.808,4.11,60,113,True
+SUP016,Supplier_016,Distributor,Taiwan,0.843,4.22,30,2140,True
+SUP017,Supplier_017,Manufacturer,Taiwan,0.903,3.81,90,4496,True
+SUP018,Supplier_018,Distributor,USA,0.828,4.42,45,2991,True
+SUP019,Supplier_019,OEM,Japan,0.715,3.2,30,675,False
+SUP020,Supplier_020,OEM,Taiwan,0.846,4.22,30,2452,True
+SUP021,Supplier_021,OEM,China,0.771,3.47,60,1056,False
+SUP022,Supplier_022,Manufacturer,Japan,0.979,4.56,30,1158,True
+SUP023,Supplier_023,Manufacturer,China,0.912,4.02,90,4685,True
+SUP024,Supplier_024,Distributor,Japan,0.858,4.28,45,3968,True
+SUP025,Supplier_025,Distributor,China,0.718,3.41,45,4023,False
+SUP026,Supplier_026,Distributor,USA,0.928,4.57,60,2133,True
+SUP027,Supplier_027,Distributor,South Korea,0.964,4.58,45,1298,True
+SUP028,Supplier_028,Distributor,USA,0.901,4.46,45,3819,True
+SUP029,Supplier_029,Manufacturer,Taiwan,0.765,3.09,30,3172,False
+SUP030,Supplier_030,Manufacturer,China,0.879,4.08,45,3391,True
+SUP031,Supplier_031,Manufacturer,China,0.956,4.66,90,2732,True
+SUP032,Supplier_032,Distributor,China,0.937,4.55,45,1767,True
+SUP033,Supplier_033,Manufacturer,China,0.897,4.33,30,3812,True
+SUP034,Supplier_034,OEM,China,0.953,4.5,45,4906,True
+SUP035,Supplier_035,Manufacturer,USA,0.846,4.18,30,3438,True
+SUP036,Supplier_036,Distributor,China,0.88,4.23,30,3965,True
+SUP037,Supplier_037,Manufacturer,China,0.612,2.91,90,4499,False
+SUP038,Supplier_038,Contract Manufacturer,China,0.864,4.23,45,2645,True
+SUP039,Supplier_039,OEM,USA,0.728,3.66,60,3288,False
+SUP040,Supplier_040,OEM,USA,0.687,3.74,30,4665,False
+SUP041,Supplier_041,Manufacturer,USA,0.93,4.81,60,1792,True
+SUP042,Supplier_042,Contract Manufacturer,Taiwan,0.731,3.25,45,4116,False
+SUP043,Supplier_043,OEM,Taiwan,0.606,2.52,45,3754,False
+SUP044,Supplier_044,Contract Manufacturer,Japan,0.895,3.93,90,4057,True
+SUP045,Supplier_045,Distributor,USA,0.733,3.03,30,1400,False
+SUP046,Supplier_046,Distributor,USA,0.684,3.17,30,1760,False
+SUP047,Supplier_047,OEM,Taiwan,0.765,3.45,45,3783,False
+SUP048,Supplier_048,Contract Manufacturer,USA,0.88,3.87,60,4776,True
+SUP049,Supplier_049,OEM,China,0.964,4.93,45,3603,True
+SUP050,Supplier_050,OEM,USA,0.828,3.94,45,1200,True

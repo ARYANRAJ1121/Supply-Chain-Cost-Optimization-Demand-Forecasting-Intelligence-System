@@ -1,0 +1,16 @@
+warehouse_id,warehouse_name,city,state,capacity_units,monthly_operating_cost,cost_per_unit_stored,current_utilization_rate
+WH01,Los Angeles Distribution Center,Los Angeles,Various,183052,117199.3,2.28,0.79
+WH02,Chicago Distribution Center,Chicago,Various,76385,84409.3,1.6,0.93
+WH03,Houston Distribution Center,Houston,Various,165672,183570.58,2.12,0.82
+WH04,Phoenix Distribution Center,Phoenix,Various,135553,139987.86,1.86,0.47
+WH05,Philadelphia Distribution Center,Philadelphia,Various,186727,213726.51,1.85,0.84
+WH06,San Antonio Distribution Center,San Antonio,Various,118760,59482.4,1.82,0.73
+WH07,San Diego Distribution Center,San Diego,Various,84531,75307.73,1.18,0.49
+WH08,Dallas Distribution Center,Dallas,Various,179749,163100.64,1.26,0.84
+WH09,San Jose Distribution Center,San Jose,Various,135708,82063.5,1.59,0.77
+WH10,Austin Distribution Center,Austin,Various,133309,157609.88,2.03,0.76
+WH11,Jacksonville Distribution Center,Jacksonville,Various,114288,133357.42,2.34,0.8
+WH12,Fort Worth Distribution Center,Fort Worth,Various,119298,68411.57,1.21,0.94
+WH13,Columbus Distribution Center,Columbus,Various,146347,145136.05,1.75,0.41
+WH14,Charlotte Distribution Center,Charlotte,Various,172720,148953.41,0.95,0.59
+WH15,Seattle Distribution Center,Seattle,Various,162755,122141.27,1.35,0.94
