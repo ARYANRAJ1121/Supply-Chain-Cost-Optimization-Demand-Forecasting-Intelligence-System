@@ -7,7 +7,7 @@ sqlalchemy==2.0.23
 matplotlib==3.8.2
 seaborn==0.13.0
 plotly==5.18.0
-dash==2.14.2
+streamlit==1.31.0
 
 # Time-Series Forecasting
 statsmodels==0.14.1
