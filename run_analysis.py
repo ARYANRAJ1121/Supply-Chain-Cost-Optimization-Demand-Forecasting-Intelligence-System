@@ -136,6 +136,12 @@ class AnalysisPipeline:
             'STEP 6: CREATING VISUALIZATIONS AND DASHBOARDS'
         )
         
+        # Step 7: Profitability Risk Prediction
+        results['Profitability Prediction'] = self.run_script(
+            'profitability_prediction.py',
+            'STEP 7: PROFITABILITY RISK PREDICTION (ML MODEL)'
+        )
+        
         # Print summary
         self.print_summary(results)
         
