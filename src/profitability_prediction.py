@@ -284,7 +284,25 @@ class ProfitabilityPredictor:
         
         X, y_class, y_reg, feature_cols = self.prepare_training_data(forecast_horizon)
         
-        # Train-test split
+        # Check if we have both classes
+        unique_classes = y_class.unique()
+        if len(unique_classes) == 1:
+            print("\n[INFO] All samples belong to one class (all profitable or all loss)")
+            print(f"   Class: {'Profitable' if unique_classes[0] == 1 else 'Loss'}")
+            print("   [SKIP] Classification model requires both profit and loss examples")
+            print("   [NOTE] Regression model will still predict profit amounts")
+            
+            # Create a dummy classifier for consistency
+            self.scaler = StandardScaler()
+            self.scaler.fit(X)
+            
+            # Return empty feature importance
+            return pd.DataFrame({
+                'feature': feature_cols,
+                'importance': [0] * len(feature_cols)
+            })
+        
+        # Train-test split with stratification
         X_train, X_test, y_train, y_test = train_test_split(
             X, y_class, test_size=0.25, random_state=42, stratify=y_class
         )
@@ -308,7 +326,13 @@ class ProfitabilityPredictor:
         
         # Predictions
         y_pred = self.classification_model.predict(X_test_scaled)
-        y_pred_proba = self.classification_model.predict_proba(X_test_scaled)[:, 1]
+        
+        # Handle probability prediction safely
+        y_pred_proba_all = self.classification_model.predict_proba(X_test_scaled)
+        if y_pred_proba_all.shape[1] > 1:
+            y_pred_proba = y_pred_proba_all[:, 1]
+        else:
+            y_pred_proba = y_pred_proba_all[:, 0]
         
         # Evaluation
         print("\n[EVALUATION] Model Performance:")
