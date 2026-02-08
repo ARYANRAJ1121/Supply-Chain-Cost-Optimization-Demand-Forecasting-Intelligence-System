@@ -454,9 +454,22 @@ class ProfitabilityPredictor:
             X = row[feature_cols].values.reshape(1, -1)
             X_scaled = self.scaler.transform(X)
             
-            # Predict
-            loss_probability = self.classification_model.predict_proba(X_scaled)[0, 0]
+            # Predict profit amount
             predicted_profit = self.regression_model.predict(X_scaled)[0]
+            
+            # Predict loss probability (if classification model exists)
+            if self.classification_model is not None:
+                loss_probability = self.classification_model.predict_proba(X_scaled)[0, 0]
+            else:
+                # If no classification model, estimate probability from predicted profit
+                # Negative profit = 100% loss probability
+                # Positive profit = lower probability based on margin
+                if predicted_profit < 0:
+                    loss_probability = 1.0
+                else:
+                    # Lower probability for higher profits
+                    margin = (predicted_profit / row['revenue']) * 100 if row['revenue'] > 0 else 0
+                    loss_probability = max(0, 1 - (margin / 30))  # 30% margin = 0% loss prob
             
             # Risk level
             if loss_probability > 0.7:
