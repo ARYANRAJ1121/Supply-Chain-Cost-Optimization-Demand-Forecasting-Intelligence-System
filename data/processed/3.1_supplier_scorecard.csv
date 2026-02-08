@@ -1,0 +1,51 @@
+supplier_id,supplier_name,supplier_type,country,on_time_delivery_pct,quality_rating,payment_terms_days,minimum_order_quantity,supplier_tier
+SUP022,Supplier_022,Manufacturer,Japan,97.9,4.56,30,1158,Tier 1 - Excellent
+SUP011,Supplier_011,Contract Manufacturer,USA,97.2,4.79,45,3911,Tier 1 - Excellent
+SUP007,Supplier_007,OEM,USA,96.7,4.83,45,761,Tier 1 - Excellent
+SUP049,Supplier_049,OEM,China,96.4,4.93,45,3603,Tier 1 - Excellent
+SUP027,Supplier_027,Distributor,South Korea,96.4,4.58,45,1298,Tier 1 - Excellent
+SUP031,Supplier_031,Manufacturer,China,95.6,4.66,90,2732,Tier 1 - Excellent
+SUP034,Supplier_034,OEM,China,95.3,4.5,45,4906,Tier 1 - Excellent
+SUP032,Supplier_032,Distributor,China,93.7,4.55,45,1767,Tier 2 - Good
+SUP041,Supplier_041,Manufacturer,USA,93.0,4.81,60,1792,Tier 2 - Good
+SUP026,Supplier_026,Distributor,USA,92.8,4.57,60,2133,Tier 2 - Good
+SUP009,Supplier_009,Contract Manufacturer,USA,92.2,4.63,30,258,Tier 2 - Good
+SUP003,Supplier_003,Contract Manufacturer,South Korea,91.2,4.46,45,4306,Tier 2 - Good
+SUP023,Supplier_023,Manufacturer,China,91.2,4.02,90,4685,Tier 2 - Good
+SUP017,Supplier_017,Manufacturer,Taiwan,90.3,3.81,90,4496,Tier 3 - Acceptable
+SUP010,Supplier_010,Contract Manufacturer,China,90.2,4.24,90,1055,Tier 2 - Good
+SUP028,Supplier_028,Distributor,USA,90.1,4.46,45,3819,Tier 2 - Good
+SUP033,Supplier_033,Manufacturer,China,89.7,4.33,30,3812,Tier 2 - Good
+SUP044,Supplier_044,Contract Manufacturer,Japan,89.5,3.93,90,4057,Tier 3 - Acceptable
+SUP002,Supplier_002,Distributor,China,88.5,3.82,60,1539,Tier 3 - Acceptable
+SUP001,Supplier_001,Distributor,USA,88.3,4.38,30,1995,Tier 2 - Good
+SUP036,Supplier_036,Distributor,China,88.0,4.23,30,3965,Tier 2 - Good
+SUP048,Supplier_048,Contract Manufacturer,USA,88.0,3.87,60,4776,Tier 3 - Acceptable
+SUP030,Supplier_030,Manufacturer,China,87.9,4.08,45,3391,Tier 2 - Good
+SUP008,Supplier_008,Contract Manufacturer,USA,86.5,4.15,60,4640,Tier 2 - Good
+SUP038,Supplier_038,Contract Manufacturer,China,86.4,4.23,45,2645,Tier 2 - Good
+SUP024,Supplier_024,Distributor,Japan,85.8,4.28,45,3968,Tier 2 - Good
+SUP006,Supplier_006,OEM,Japan,85.8,4.23,90,4880,Tier 2 - Good
+SUP020,Supplier_020,OEM,Taiwan,84.6,4.22,30,2452,Tier 3 - Acceptable
+SUP035,Supplier_035,Manufacturer,USA,84.6,4.18,30,3438,Tier 3 - Acceptable
+SUP013,Supplier_013,Manufacturer,Taiwan,84.6,4.13,60,4989,Tier 3 - Acceptable
+SUP016,Supplier_016,Distributor,Taiwan,84.3,4.22,30,2140,Tier 3 - Acceptable
+SUP018,Supplier_018,Distributor,USA,82.8,4.42,45,2991,Tier 3 - Acceptable
+SUP050,Supplier_050,OEM,USA,82.8,3.94,45,1200,Tier 3 - Acceptable
+SUP015,Supplier_015,Distributor,South Korea,80.8,4.11,60,113,Tier 3 - Acceptable
+SUP005,Supplier_005,Distributor,USA,80.5,3.91,45,2234,Tier 3 - Acceptable
+SUP014,Supplier_014,Contract Manufacturer,China,78.6,3.14,45,474,Tier 4 - Poor (Review Required)
+SUP012,Supplier_012,Distributor,Japan,78.5,3.34,45,1369,Tier 4 - Poor (Review Required)
+SUP021,Supplier_021,OEM,China,77.1,3.47,60,1056,Tier 4 - Poor (Review Required)
+SUP047,Supplier_047,OEM,Taiwan,76.5,3.45,45,3783,Tier 4 - Poor (Review Required)
+SUP029,Supplier_029,Manufacturer,Taiwan,76.5,3.09,30,3172,Tier 4 - Poor (Review Required)
+SUP045,Supplier_045,Distributor,USA,73.3,3.03,30,1400,Tier 4 - Poor (Review Required)
+SUP042,Supplier_042,Contract Manufacturer,Taiwan,73.1,3.25,45,4116,Tier 4 - Poor (Review Required)
+SUP039,Supplier_039,OEM,USA,72.8,3.66,60,3288,Tier 3 - Acceptable
+SUP025,Supplier_025,Distributor,China,71.8,3.41,45,4023,Tier 4 - Poor (Review Required)
+SUP019,Supplier_019,OEM,Japan,71.5,3.2,30,675,Tier 4 - Poor (Review Required)
+SUP040,Supplier_040,OEM,USA,68.7,3.74,30,4665,Tier 4 - Poor (Review Required)
+SUP046,Supplier_046,Distributor,USA,68.4,3.17,30,1760,Tier 4 - Poor (Review Required)
+SUP004,Supplier_004,Contract Manufacturer,China,66.2,3.72,45,509,Tier 4 - Poor (Review Required)
+SUP037,Supplier_037,Manufacturer,China,61.2,2.91,90,4499,Tier 4 - Poor (Review Required)
+SUP043,Supplier_043,OEM,Taiwan,60.6,2.52,45,3754,Tier 4 - Poor (Review Required)

@@ -1,0 +1,11 @@
+query_name,rows_returned,columns,execution_time_sec,status
+1.1_ABC_Classification,1500,9,0.01,SUCCESS
+1.2_Inventory_Turnover,1500,10,0.07,SUCCESS
+1.3_Economic_Order_Quantity,200,9,0.05,SUCCESS
+1.4_Slow_Moving_Inventory,1500,11,0.03,SUCCESS
+2.1_Time_Series_Decomposition,731,10,0.08,SUCCESS
+2.2_Demand_Volatility,200,10,0.04,SUCCESS
+3.1_Supplier_Scorecard,50,9,0.0,SUCCESS
+4.1_Fill_Rate_Analysis,200,12,0.04,SUCCESS
+5.1_Warehouse_Efficiency,15,10,0.0,SUCCESS
+6.1_Executive_KPIs,4,2,0.05,SUCCESS

@@ -1,0 +1,16 @@
+warehouse_id,warehouse_name,city,capacity_units,total_units,utilization_pct,monthly_operating_cost,cost_per_unit_stored,annual_operating_cost,efficiency_status
+WH01,Los Angeles Distribution Center,Los Angeles,183052,225755,123.33,117199.3,0.52,1406391.6,Over Capacity - Expansion Needed
+WH08,Dallas Distribution Center,Dallas,179749,237351,132.05,163100.64,0.69,1957207.68,Over Capacity - Expansion Needed
+WH14,Charlotte Distribution Center,Charlotte,172720,231110,133.81,148953.41,0.64,1787440.92,Over Capacity - Expansion Needed
+WH05,Philadelphia Distribution Center,Philadelphia,186727,282384,151.23,213726.51,0.76,2564718.12,Over Capacity - Expansion Needed
+WH03,Houston Distribution Center,Houston,165672,254232,153.46,183570.58,0.72,2202846.96,Over Capacity - Expansion Needed
+WH04,Phoenix Distribution Center,Phoenix,135553,212418,156.7,139987.86,0.66,1679854.32,Over Capacity - Expansion Needed
+WH15,Seattle Distribution Center,Seattle,162755,282195,173.39,122141.27,0.43,1465695.24,Over Capacity - Expansion Needed
+WH13,Columbus Distribution Center,Columbus,146347,266526,182.12,145136.05,0.54,1741632.6,Over Capacity - Expansion Needed
+WH10,Austin Distribution Center,Austin,133309,248124,186.13,157609.88,0.64,1891318.56,Over Capacity - Expansion Needed
+WH09,San Jose Distribution Center,San Jose,135708,264192,194.68,82063.5,0.31,984762.0,Over Capacity - Expansion Needed
+WH12,Fort Worth Distribution Center,Fort Worth,119298,243228,203.88,68411.57,0.28,820938.84,Over Capacity - Expansion Needed
+WH06,San Antonio Distribution Center,San Antonio,118760,253613,213.55,59482.4,0.23,713788.8,Over Capacity - Expansion Needed
+WH11,Jacksonville Distribution Center,Jacksonville,114288,256561,224.49,133357.42,0.52,1600289.04,Over Capacity - Expansion Needed
+WH07,San Diego Distribution Center,San Diego,84531,249634,295.32,75307.73,0.3,903692.76,Over Capacity - Expansion Needed
+WH02,Chicago Distribution Center,Chicago,76385,260468,340.99,84409.3,0.32,1012911.6,Over Capacity - Expansion Needed

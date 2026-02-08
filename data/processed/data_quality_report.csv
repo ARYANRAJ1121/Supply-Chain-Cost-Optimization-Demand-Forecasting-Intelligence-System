@@ -1,0 +1,8 @@
+Dataset,Rows,Columns,Missing Values,Missing %,Duplicates,Memory (MB)
+SKU Master,200,9,0,0.0,0,0.04
+Warehouse Master,15,8,0,0.0,0,0.0
+Supplier Master,50,9,0,0.0,0,0.01
+Historical Sales,146075,10,0,0.0,0,37.61
+Inventory Transactions,112258,8,0,0.0,0,27.5
+Current Inventory,1500,10,0,0.0,0,0.32
+Purchase Orders,5000,14,0,0.0,0,1.4
