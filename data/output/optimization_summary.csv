@@ -1,0 +1,12 @@
+,Value
+Analysis Date,2026-02-08
+SKUs Analyzed,200
+Target Service Level,95%
+Average EOQ,323 units
+Average Reorder Point,3668 units
+Average Safety Stock,332 units
+Total Annual Inventory Cost (Optimized),"$4,871,084.82"
+Current Annual Carrying Cost,"$185,195,856.61"
+Optimized Annual Carrying Cost,"$31,410,235.47"
+Potential Annual Savings,"$154,881,622.56"
+Cost Reduction Percentage,83.6%

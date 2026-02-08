@@ -1,0 +1,12 @@
+,Value
+Analysis Date,2026-02-08
+Forecast Horizon,3 months ahead
+Model Type,Random Forest + Gradient Boosting
+Historical Period,2024-01 to 2025-12
+Total Months Analyzed,24
+Profitable Months,24
+Loss Months,0
+Average Monthly Profit,"$25,623,608.94"
+Average Operating Margin,27.03%
+Model Accuracy,See classification_model_performance.csv
+Top Risk Factor,See risk_factor_importance.csv

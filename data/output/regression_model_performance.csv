@@ -1,0 +1,7 @@
+,0
+Model,Gradient Boosting Regressor
+Forecast Horizon,3 months
+MAE,"$2,615,906.79"
+RMSE,"$4,678,679.89"
+R2_Score,0.5079
+MAPE,10.59%

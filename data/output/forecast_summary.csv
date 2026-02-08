@@ -1,0 +1,11 @@
+,Value
+Analysis Date,2026-02-08
+Forecast Horizon,90 days
+Models Evaluated,5
+Best Model,Naive
+Best Model MAPE,29.47%
+Best Model Accuracy,70.53%
+Target Accuracy,75%
+Target Met,No
+Baseline (Naive) MAPE,29.47%
+Improvement vs Baseline,0.00 pp
