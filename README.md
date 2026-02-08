@@ -138,11 +138,99 @@ cd Supply-Chain-Cost-Optimization-Demand-Forecasting-Intelligence-System
 pip install -r requirements.txt
 ```
 
-1. **Generate synthetic data**
+---
+
+## 📊 How to Run
+
+### Option 1: Run Complete Pipeline (Recommended)
+
+Execute all analyses in one command:
+
+```bash
+python run_analysis.py
+```
+
+**This will automatically:**
+
+1. ✅ Generate synthetic supply chain data (200 SKUs, 146K transactions)
+2. ✅ Execute 10 SQL analytical queries
+3. ✅ Perform exploratory data analysis
+4. ✅ Train demand forecasting models (Prophet, SARIMA)
+5. ✅ Calculate inventory optimization (EOQ, ROP, Safety Stock)
+6. ✅ Generate interactive visualizations
+7. ✅ Train profitability prediction ML model
+
+**Expected time:** 8-12 minutes
+
+**Output:**
+
+- `data/raw/` - 11 CSV/JSON files + SQLite database
+- `data/processed/` - 17 SQL query results + EDA reports
+- `data/output/` - 9 analysis outputs (forecasts, optimization, predictions)
+- `reports/figures/` - 8 interactive HTML visualizations
+
+### Option 2: Run Step-by-Step
+
+**Step 1: Generate Data**
 
 ```bash
 python src/data_generation.py
 ```
+
+**Step 2: Execute SQL Queries**
+
+```bash
+python src/execute_sql_queries.py
+```
+
+**Step 3: Exploratory Data Analysis**
+
+```bash
+python src/exploratory_analysis.py
+```
+
+**Step 4: Demand Forecasting** (3-5 minutes)
+
+```bash
+python src/demand_forecasting.py
+```
+
+**Step 5: Inventory Optimization**
+
+```bash
+python src/inventory_optimization.py
+```
+
+**Step 6: Visualizations**
+
+```bash
+python src/visualization.py
+```
+
+**Step 7: Profitability Prediction**
+
+```bash
+python src/profitability_prediction.py
+```
+
+### 🎨 Launch Interactive Dashboard
+
+After running the analysis, launch the Streamlit dashboard:
+
+```bash
+streamlit run app.py
+```
+
+**Then open:** `http://localhost:8501`
+
+**Dashboard Features:**
+
+- 🎯 **Executive Overview** - KPIs, revenue trends, critical alerts
+- 📊 **Demand Forecasting** - Model comparison (76.3% accuracy)
+- 📦 **Inventory Optimization** - $154.8M savings opportunity
+- 🚨 **Profitability Risk** - ML predictions, 3-month ahead warnings
+- 🚚 **Supplier Analytics** - Performance scorecard
+- 📈 **Advanced Analytics** - Seasonality patterns
 
 ---
 
